@@ -1,0 +1,9 @@
+C:\ZGeorge\VSProjects\JbLibrary\Jb.Api.Repositories.Abstractions\bin\Debug\netstandard2.0\Jb.Api.Repositories.Abstractions.deps.json
+C:\ZGeorge\VSProjects\JbLibrary\Jb.Api.Repositories.Abstractions\bin\Debug\netstandard2.0\Jb.Api.Repositories.Abstractions.dll
+C:\ZGeorge\VSProjects\JbLibrary\Jb.Api.Repositories.Abstractions\bin\Debug\netstandard2.0\Jb.Api.Repositories.Abstractions.pdb
+C:\ZGeorge\VSProjects\JbLibrary\Jb.Api.Repositories.Abstractions\obj\Debug\netstandard2.0\Jb.Api.Repositories.Abstractions.csprojAssemblyReference.cache
+C:\ZGeorge\VSProjects\JbLibrary\Jb.Api.Repositories.Abstractions\obj\Debug\netstandard2.0\Jb.Api.Repositories.Abstractions.csproj.CoreCompileInputs.cache
+C:\ZGeorge\VSProjects\JbLibrary\Jb.Api.Repositories.Abstractions\obj\Debug\netstandard2.0\Jb.Api.Repositories.Abstractions.AssemblyInfoInputs.cache
+C:\ZGeorge\VSProjects\JbLibrary\Jb.Api.Repositories.Abstractions\obj\Debug\netstandard2.0\Jb.Api.Repositories.Abstractions.AssemblyInfo.cs
+C:\ZGeorge\VSProjects\JbLibrary\Jb.Api.Repositories.Abstractions\obj\Debug\netstandard2.0\Jb.Api.Repositories.Abstractions.dll
+C:\ZGeorge\VSProjects\JbLibrary\Jb.Api.Repositories.Abstractions\obj\Debug\netstandard2.0\Jb.Api.Repositories.Abstractions.pdb

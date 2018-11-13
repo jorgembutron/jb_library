@@ -1,0 +1,14 @@
+C:\ZGeorge\VSProjects\JbLibrary\Jb.Api.Repositories\bin\Debug\netcoreapp2.1\Jb.Api.Repositories.deps.json
+C:\ZGeorge\VSProjects\JbLibrary\Jb.Api.Repositories\bin\Debug\netcoreapp2.1\Jb.Api.Repositories.runtimeconfig.json
+C:\ZGeorge\VSProjects\JbLibrary\Jb.Api.Repositories\bin\Debug\netcoreapp2.1\Jb.Api.Repositories.runtimeconfig.dev.json
+C:\ZGeorge\VSProjects\JbLibrary\Jb.Api.Repositories\bin\Debug\netcoreapp2.1\Jb.Api.Repositories.dll
+C:\ZGeorge\VSProjects\JbLibrary\Jb.Api.Repositories\bin\Debug\netcoreapp2.1\Jb.Api.Repositories.pdb
+C:\ZGeorge\VSProjects\JbLibrary\Jb.Api.Repositories\bin\Debug\netcoreapp2.1\Jb.Api.Repositories.Abstractions.dll
+C:\ZGeorge\VSProjects\JbLibrary\Jb.Api.Repositories\bin\Debug\netcoreapp2.1\Jb.Api.Repositories.Abstractions.pdb
+C:\ZGeorge\VSProjects\JbLibrary\Jb.Api.Repositories\obj\Debug\netcoreapp2.1\Jb.Api.Repositories.csprojAssemblyReference.cache
+C:\ZGeorge\VSProjects\JbLibrary\Jb.Api.Repositories\obj\Debug\netcoreapp2.1\Jb.Api.Repositories.csproj.CoreCompileInputs.cache
+C:\ZGeorge\VSProjects\JbLibrary\Jb.Api.Repositories\obj\Debug\netcoreapp2.1\Jb.Api.Repositories.AssemblyInfoInputs.cache
+C:\ZGeorge\VSProjects\JbLibrary\Jb.Api.Repositories\obj\Debug\netcoreapp2.1\Jb.Api.Repositories.AssemblyInfo.cs
+C:\ZGeorge\VSProjects\JbLibrary\Jb.Api.Repositories\obj\Debug\netcoreapp2.1\Jb.Api.Repositories.csproj.CopyComplete
+C:\ZGeorge\VSProjects\JbLibrary\Jb.Api.Repositories\obj\Debug\netcoreapp2.1\Jb.Api.Repositories.dll
+C:\ZGeorge\VSProjects\JbLibrary\Jb.Api.Repositories\obj\Debug\netcoreapp2.1\Jb.Api.Repositories.pdb
