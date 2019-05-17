@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jb.Api.Repositories", "Jb.Api.Repositories\Jb.Api.Repositories.csproj", "{E288980A-D6F2-4C02-9D26-A6E9D870C69A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jb.Api.Repositories", "Jb.Api.Repositories\Jb.Api.Repositories.csproj", "{E288980A-D6F2-4C02-9D26-A6E9D870C69A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{BF7AFDCA-3702-4054-AA0F-B0C03EF7AE6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jb.Api.Main", "Jb.Api.Main\Jb.Api.Main.csproj", "{D2834F76-F103-49AD-BAEF-1E4B1A1F3C0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jb.Api.Main", "Jb.Api.Main\Jb.Api.Main.csproj", "{D2834F76-F103-49AD-BAEF-1E4B1A1F3C0D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{AE5D2809-41B8-4AE8-AF9B-7C001531FBA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jb.Api.Repositories.Abstractions", "Jb.Api.Repositories.Abstractions\Jb.Api.Repositories.Abstractions.csproj", "{E3C9768D-FD5D-4348-BF1A-16121D74AECB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jb.Api.Repositories.Abstractions", "Jb.Api.Repositories.Abstractions\Jb.Api.Repositories.Abstractions.csproj", "{E3C9768D-FD5D-4348-BF1A-16121D74AECB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

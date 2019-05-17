@@ -23,15 +23,127 @@ namespace Jb.Api.Repositories.Migrations
                 {
                     b.Property<int>("AuthorId")
                         .ValueGeneratedOnAdd()
+                        .HasColumnName("Id")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("CreatedAt");
 
                     b.Property<string>("Name");
 
                     b.HasKey("AuthorId");
 
                     b.ToTable("Authors");
+                });
+
+            modelBuilder.Entity("Jb.Api.Repositories.Abstractions.Book", b =>
+                {
+                    b.Property<int>("BookId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("Id")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description");
+
+                    b.Property<string>("ImageUrl");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18, 2)");
+
+                    b.Property<DateTime>("PublishedOn");
+
+                    b.Property<string>("Publisher");
+
+                    b.Property<string>("Title");
+
+                    b.HasKey("BookId");
+
+                    b.ToTable("Books");
+                });
+
+            modelBuilder.Entity("Jb.Api.Repositories.Abstractions.BookAuthor", b =>
+                {
+                    b.Property<int>("BookId");
+
+                    b.Property<int>("AuthorId");
+
+                    b.Property<byte>("Order");
+
+                    b.HasKey("BookId", "AuthorId");
+
+                    b.HasIndex("AuthorId");
+
+                    b.ToTable("BookAuthor");
+                });
+
+            modelBuilder.Entity("Jb.Api.Repositories.Abstractions.PriceOffer", b =>
+                {
+                    b.Property<int>("PriceOfferId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("Id")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("BookId");
+
+                    b.Property<decimal>("NewPrice")
+                        .HasColumnType("decimal(18, 2)");
+
+                    b.Property<string>("PromotionalText");
+
+                    b.HasKey("PriceOfferId");
+
+                    b.HasIndex("BookId")
+                        .IsUnique();
+
+                    b.ToTable("PriceOffers");
+                });
+
+            modelBuilder.Entity("Jb.Api.Repositories.Abstractions.Review", b =>
+                {
+                    b.Property<int>("ReviewId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("Id")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("BookId");
+
+                    b.Property<string>("Comment");
+
+                    b.Property<int>("NumStars");
+
+                    b.Property<string>("VoterName");
+
+                    b.HasKey("ReviewId");
+
+                    b.HasIndex("BookId");
+
+                    b.ToTable("Review");
+                });
+
+            modelBuilder.Entity("Jb.Api.Repositories.Abstractions.BookAuthor", b =>
+                {
+                    b.HasOne("Jb.Api.Repositories.Abstractions.Author", "Author")
+                        .WithMany("BooksLink")
+                        .HasForeignKey("AuthorId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Jb.Api.Repositories.Abstractions.Book", "Book")
+                        .WithMany("AuthorsLink")
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Jb.Api.Repositories.Abstractions.PriceOffer", b =>
+                {
+                    b.HasOne("Jb.Api.Repositories.Abstractions.Book")
+                        .WithOne("Promotion")
+                        .HasForeignKey("Jb.Api.Repositories.Abstractions.PriceOffer", "BookId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Jb.Api.Repositories.Abstractions.Review", b =>
+                {
+                    b.HasOne("Jb.Api.Repositories.Abstractions.Book")
+                        .WithMany("Reviews")
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }
