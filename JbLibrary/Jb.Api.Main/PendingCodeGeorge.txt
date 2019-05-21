@@ -15,6 +15,20 @@
 	-Script-migration -Project Jb.Api.Infrastructure.Repositories -StartupProject Jb.Api.Main
 9.-run command: update-database -Project Jb.Api.Infrastructure.Repositories -StartupProject Jb.Api.Main
 
+*************************************************************************
+ENDPOINTS
+
+AUTHORS
+GET api/authors
+GET api/authors/{authorid}
+
+BOOKS
+GET api/authors/{authorid}/books/
+GET api/authors/{authorid}/books/{bookid}
+
+
+
+*************************************************************************
 docker run --rm -it microsoft/aspnetcore
 docker run --rm -it -v ${PWD}:/webapi microsoft/aspnetcore
 root@1dd0c5995ef8:/# ls webapi -l
