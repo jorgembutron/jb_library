@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using Jb.Api.Repositories.Abstractions;
-using Microsoft.EntityFrameworkCore;
+﻿using System.Linq;
+using Jb.Api.Infrastructure.Repositories.Abstractions;
+using Jb.Api.Infrastructure.Repositories.Context;
 
-namespace Jb.Api.Repositories
+namespace Jb.Api.Infrastructure.Repositories
 {
     public class BookRepository : IBookRepository
     {

@@ -2,44 +2,42 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Jb.Api.Repositories.Migrations
+namespace Jb.Api.Infrastructure.Repositories.Migrations
 {
-    public partial class DbModel : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_Books_Authors_AuthorId",
-                table: "Books");
+            migrationBuilder.CreateTable(
+                name: "Authors",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Authors", x => x.Id);
+                });
 
-            migrationBuilder.DropIndex(
-                name: "IX_Books_AuthorId",
-                table: "Books");
-
-            migrationBuilder.DropColumn(
-                name: "AuthorId",
-                table: "Books");
-
-            migrationBuilder.DropColumn(
-                name: "CreatedAt",
-                table: "Authors");
-
-            migrationBuilder.AddColumn<string>(
-                name: "ImageUrl",
-                table: "Books",
-                nullable: true);
-
-            migrationBuilder.AddColumn<decimal>(
-                name: "Price",
-                table: "Books",
-                type: "decimal(18, 2)",
-                nullable: false,
-                defaultValue: 0m);
-
-            migrationBuilder.AddColumn<string>(
-                name: "Publisher",
-                table: "Books",
-                nullable: true);
+            migrationBuilder.CreateTable(
+                name: "Books",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Title = table.Column<string>(nullable: true),
+                    Description = table.Column<string>(nullable: true),
+                    PublishedOn = table.Column<DateTime>(nullable: false),
+                    Publisher = table.Column<string>(nullable: true),
+                    Price = table.Column<decimal>(type: "decimal(18, 2)", nullable: false),
+                    ImageUrl = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Books", x => x.Id);
+                });
 
             migrationBuilder.CreateTable(
                 name: "BookAuthor",
@@ -137,42 +135,11 @@ namespace Jb.Api.Repositories.Migrations
             migrationBuilder.DropTable(
                 name: "Review");
 
-            migrationBuilder.DropColumn(
-                name: "ImageUrl",
-                table: "Books");
+            migrationBuilder.DropTable(
+                name: "Authors");
 
-            migrationBuilder.DropColumn(
-                name: "Price",
-                table: "Books");
-
-            migrationBuilder.DropColumn(
-                name: "Publisher",
-                table: "Books");
-
-            migrationBuilder.AddColumn<int>(
-                name: "AuthorId",
-                table: "Books",
-                nullable: false,
-                defaultValue: 0);
-
-            migrationBuilder.AddColumn<DateTime>(
-                name: "CreatedAt",
-                table: "Authors",
-                nullable: false,
-                defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Books_AuthorId",
-                table: "Books",
-                column: "AuthorId");
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Books_Authors_AuthorId",
-                table: "Books",
-                column: "AuthorId",
-                principalTable: "Authors",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
+            migrationBuilder.DropTable(
+                name: "Books");
         }
     }
 }

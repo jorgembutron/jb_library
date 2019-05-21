@@ -1,0 +1,35 @@
+0.-Create the Main Api, Controllers, Domain, Infrastructure repositories 
+& infrastructure repositories abstractions projects
+1.-reference main api to Domain & Repositories
+2.-Reference Infrastructure to Domain
+3.-Create the domain clases on Domain project
+4.-create the custom dbcontext class on infrastructure repositories project
+5.-To the infrastructure Repositories proyect add Microsoft.EntityFrameworkCore.SqlServer packege
+	may be we need to install Microsoft.EntityFrameworkCore.Tools but maybe is in
+	installed on thw the main project via Microsoft.AspNetCore.App package the migrations engine is on
+	Microsoft.EntityFrameworkCore.Design packege
+6.-run command: get-help entityframeworkcore on Package manager console
+7.-run command: add-migration initial -Project Jb.Api.Infrastructure.Repositories -StartupProject Jb.Api.Main
+	-A snapshot & a code file is created
+8.-script if needed
+	-Script-migration -Project Jb.Api.Infrastructure.Repositories -StartupProject Jb.Api.Main
+9.-run command: update-database -Project Jb.Api.Infrastructure.Repositories -StartupProject Jb.Api.Main
+
+docker run --rm -it microsoft/aspnetcore
+docker run --rm -it -v ${PWD}:/webapi microsoft/aspnetcore
+root@1dd0c5995ef8:/# ls webapi -l
+dotnet webapi/bin/Debug/netcoreapp2.1/publish/webapitest.dll
+docker run --rm -it -v  ${PWD}:/webapi -p 8080:80 microsoft/dotnet:2.1-aspnetcore-runtime
+
+
+entityframeworktools package
+script-migration -Project Jb.Api.Repositories -StartupProject Jb.Api.Main
+add-migration testColumn -Project Jb.Api.Repositories -StartupProject Jb.Api.
+update-database modAuthorId -Project Jb.Api.Repositories -StartupProject Jb.Api.Main
+remove-migration -Project Jb.Api.Repositories -StartupProject Jb.Api.Main
+
+git rm -r --cached "C:\ZGeorge\Git\jb_library\JbLibrary\Jb.Api.Main\bin"
+git commit -m "untracking bin and obj"
+
+New architecture schema
+add-migration initial -Project Jb.Api.Infrastructure.Repositories -StartupProject Jb.Api.Main

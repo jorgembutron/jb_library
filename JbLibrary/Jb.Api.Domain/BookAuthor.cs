@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Jb.Api.Repositories.Abstractions
+﻿namespace Jb.Api.Domain
 {
     public class BookAuthor
     {
