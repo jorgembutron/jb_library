@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 //using Microsoft.Extensions.Logging.Console;
 
-namespace Jb.Api.Infrastructure.Repositories.Context
+namespace Jb.Api.Infrastructure.Context
 {
     public class LibraryDbContext : DbContext
     {

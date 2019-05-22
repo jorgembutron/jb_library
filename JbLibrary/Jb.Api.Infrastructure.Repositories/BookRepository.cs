@@ -1,8 +1,12 @@
-﻿using System.Linq;
-using Jb.Api.Infrastructure.Repositories.Abstractions;
-using Jb.Api.Infrastructure.Repositories.Context;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Jb.Api.Domain;
+using Jb.Api.Infrastructure.Abstractions;
+using Jb.Api.Infrastructure.Context;
 
-namespace Jb.Api.Infrastructure.Repositories
+namespace Jb.Api.Infrastructure
 {
     public class BookRepository : IBookRepository
     {
@@ -12,20 +16,25 @@ namespace Jb.Api.Infrastructure.Repositories
         {
             Context = context;
         }
-        public void GetBooks()
+
+        public Task<Book> GetBookFromAuthorAsync(Guid authorId, Guid bookId)
         {
-            var books = Context.Books
-                //.Include(a => a.AuthorsLink)
-                //.ThenInclude(a => a.Author)
-                //.Include(r => r.Reviews)
-                //.Where(b => b.BookId == 1).ToList()
-                .Select(b => new
-                {
-                    b.BookId,
-                    b.Title,
-                    Reviews = b.Reviews.Select(r => r.Comment)
-                })
-                .Where(b => b.BookId == 1).ToList();
+            throw new NotImplementedException();
+        }
+
+        public Task<IReadOnlyCollection<Book>> GetBooksFromAuthorAsync(Guid authorId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> AddBookForAuthorAsync(Guid authorId, Book book)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> SaveAsync()
+        {
+            throw new NotImplementedException();
         }
     }
 }

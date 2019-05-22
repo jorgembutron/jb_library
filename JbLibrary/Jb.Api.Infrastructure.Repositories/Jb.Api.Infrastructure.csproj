@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Jb.Api.Domain\Jb.Api.Domain.csproj" />
-    <ProjectReference Include="..\Jb.Api.Infrastructure.Repositories.Abstractions\Jb.Api.Infrastructure.Repositories.Abstractions.csproj" />
+    <ProjectReference Include="..\Jb.Api.Infrastructure.Repositories.Abstractions\Jb.Api.Infrastructure.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>

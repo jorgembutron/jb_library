@@ -1,9 +1,11 @@
-﻿namespace Jb.Api.Domain
+﻿using System;
+
+namespace Jb.Api.Domain
 {
     public class BookAuthor
     {
-        public int BookId { get; set; }        //#H
-        public int AuthorId { get; set; }      //#H
+        public Guid BookId { get; set; }        //#H
+        public Guid AuthorId { get; set; }      //#H
         public byte Order { get; set; }        //#I
 
         //-----------------------------

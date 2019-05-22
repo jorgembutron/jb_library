@@ -1,8 +1,7 @@
 ﻿using System;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Jb.Api.Infrastructure.Repositories.Migrations
+namespace Jb.Api.Infrastructure.Migrations
 {
     public partial class initial : Migration
     {
@@ -12,8 +11,7 @@ namespace Jb.Api.Infrastructure.Repositories.Migrations
                 name: "Authors",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Id = table.Column<Guid>(nullable: false),
                     Name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -25,8 +23,7 @@ namespace Jb.Api.Infrastructure.Repositories.Migrations
                 name: "Books",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Id = table.Column<Guid>(nullable: false),
                     Title = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true),
                     PublishedOn = table.Column<DateTime>(nullable: false),
@@ -43,8 +40,8 @@ namespace Jb.Api.Infrastructure.Repositories.Migrations
                 name: "BookAuthor",
                 columns: table => new
                 {
-                    BookId = table.Column<int>(nullable: false),
-                    AuthorId = table.Column<int>(nullable: false),
+                    BookId = table.Column<Guid>(nullable: false),
+                    AuthorId = table.Column<Guid>(nullable: false),
                     Order = table.Column<byte>(nullable: false)
                 },
                 constraints: table =>
@@ -68,11 +65,10 @@ namespace Jb.Api.Infrastructure.Repositories.Migrations
                 name: "PriceOffers",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Id = table.Column<Guid>(nullable: false),
                     NewPrice = table.Column<decimal>(type: "decimal(18, 2)", nullable: false),
                     PromotionalText = table.Column<string>(nullable: true),
-                    BookId = table.Column<int>(nullable: false)
+                    BookId = table.Column<Guid>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -89,12 +85,11 @@ namespace Jb.Api.Infrastructure.Repositories.Migrations
                 name: "Review",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Id = table.Column<Guid>(nullable: false),
                     VoterName = table.Column<string>(nullable: true),
                     NumStars = table.Column<int>(nullable: false),
                     Comment = table.Column<string>(nullable: true),
-                    BookId = table.Column<int>(nullable: false)
+                    BookId = table.Column<Guid>(nullable: false)
                 },
                 constraints: table =>
                 {

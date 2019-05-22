@@ -9,11 +9,11 @@
 	installed on thw the main project via Microsoft.AspNetCore.App package the migrations engine is on
 	Microsoft.EntityFrameworkCore.Design packege
 6.-run command: get-help entityframeworkcore on Package manager console
-7.-run command: add-migration initial -Project Jb.Api.Infrastructure.Repositories -StartupProject Jb.Api.Main
+7.-run command: add-migration initial -Project Jb.Api.Infrastructure -StartupProject Jb.Api.Main
 	-A snapshot & a code file is created
 8.-script if needed
 	-Script-migration -Project Jb.Api.Infrastructure.Repositories -StartupProject Jb.Api.Main
-9.-run command: update-database -Project Jb.Api.Infrastructure.Repositories -StartupProject Jb.Api.Main
+9.-run command: update-database -Project Jb.Api.Infrastructure -StartupProject Jb.Api.Main
 
 *************************************************************************
 ENDPOINTS

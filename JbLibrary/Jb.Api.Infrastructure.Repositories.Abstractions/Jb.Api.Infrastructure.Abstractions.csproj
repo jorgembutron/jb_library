@@ -1,11 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Jb.Api.Models\Jb.Api.Models.csproj" />
+    <ProjectReference Include="..\Jb.Api.Domain\Jb.Api.Domain.csproj" />
   </ItemGroup>
 
 </Project>

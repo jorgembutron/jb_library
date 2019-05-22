@@ -7,7 +7,7 @@ namespace Jb.Api.Domain
     public class Book
     {
         [Column("Id")]
-        public int BookId { get; set; }
+        public Guid BookId { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public DateTime PublishedOn { get; set; }
