@@ -4,14 +4,16 @@ using Jb.Api.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Jb.Api.Infrastructure.Migrations
 {
     [DbContext(typeof(LibraryDbContext))]
-    partial class LibraryDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190522175422_updateCols")]
+    partial class updateCols
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -27,9 +29,7 @@ namespace Jb.Api.Infrastructure.Migrations
 
                     b.Property<DateTimeOffset>("DateOfBirth");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(100);
+                    b.Property<string>("Name");
 
                     b.HasKey("AuthorId");
 
@@ -42,9 +42,7 @@ namespace Jb.Api.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnName("Id");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasMaxLength(256);
+                    b.Property<string>("Description");
 
                     b.Property<string>("ImageUrl");
 
@@ -53,13 +51,9 @@ namespace Jb.Api.Infrastructure.Migrations
 
                     b.Property<DateTime>("PublishedOn");
 
-                    b.Property<string>("Publisher")
-                        .IsRequired()
-                        .HasMaxLength(100);
+                    b.Property<string>("Publisher");
 
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(100);
+                    b.Property<string>("Title");
 
                     b.HasKey("BookId");
 

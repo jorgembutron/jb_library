@@ -16,7 +16,7 @@ namespace Jb.Api.Controllers
         }
 
         [HttpPost()]
-        public async Task<ActionResult> AddAsync([FromBody]AuthorDto authorDto)
+        public async Task<ActionResult> AddAsync([FromBody]AuthorCreationDto authorDto)
         {
             await _authorService.AddAuthorAsync().ConfigureAwait(false);
 

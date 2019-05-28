@@ -8,6 +8,6 @@ namespace Jb.Api.Services.Abstractions
     {
         Task AddAuthorAsync();
 
-        Task<AuthorDto> GetAuthorsAsync();
+        Task<AuthorCreationDto> GetAuthorsAsync();
     }
 }

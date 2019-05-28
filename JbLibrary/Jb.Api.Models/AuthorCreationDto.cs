@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Jb.Api.Models
 {
-    public class AuthorDto
+    public class AuthorCreationDto
     {
     }
 }

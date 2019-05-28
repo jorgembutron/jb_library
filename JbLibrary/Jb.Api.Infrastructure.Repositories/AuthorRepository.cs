@@ -20,11 +20,12 @@ namespace Jb.Api.Infrastructure
         }
 
         public async Task<IReadOnlyCollection<Author>> GetAuthorsAsync() 
-            => await _libraryDbContext.Authors.AsNoTracking().ToListAsync().ConfigureAwait(false);
+            => await _libraryDbContext.Authors.AsNoTracking()
+                                                .ToListAsync().ConfigureAwait(false);
 
         public async Task<Author> GetAuthorAsync(Guid authorId) 
             => await _libraryDbContext.Authors.AsNoTracking()
-                .FirstOrDefaultAsync(a => a.AuthorId == authorId);
+                                                .FirstOrDefaultAsync(a => a.AuthorId == authorId);
 
         public async Task<Guid> AddAuthorAsync(Author author)
         {

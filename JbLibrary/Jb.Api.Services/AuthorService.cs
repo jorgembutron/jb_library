@@ -14,7 +14,7 @@ namespace Jb.Api.Services
             throw new NotImplementedException();
         }
 
-        public Task<AuthorDto> GetAuthorsAsync()
+        public Task<AuthorCreationDto> GetAuthorsAsync()
         {
             throw new NotImplementedException();
         }
